@@ -36,7 +36,7 @@ void dibujar() {
 
 
     //mar
-    glColor3f(0, 71, 171);
+    glColor3f(0, 0, 255);
 
     glBegin(GL_POLYGON); //dibujaremos lineas
 
@@ -289,11 +289,60 @@ void dibujar() {
     }
     glEnd();
 
+    //afuera borde superior
+    radio = 228;
+    glBegin(GL_POINTS);
+    glPointSize(5);
+    glColor3f(0, 0, 0);
+
+    for (float i = 6.92; i > 2.5; i -= 0.001) {
+        calx = radio * cos(i) + 350;
+        caly = radio * sin(i) + 319;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //afuera
+    radio = 229;
+    glBegin(GL_POINTS);
+    glPointSize(5);
+    glColor3f(0, 153, 0);
+
+    for (float i = 6.92; i > 2.5; i -= 0.001) {
+        calx = radio * cos(i) + 350;
+        caly = radio * sin(i) + 319;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
     //afuera
     radio = 230;
     glBegin(GL_POINTS);
     glPointSize(5);
     glColor3f(0, 153, 0);
+
+    for (float i = 6.92; i > 2.5; i -= 0.001) {
+        calx = radio * cos(i) + 350;
+        caly = radio * sin(i) + 319;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //afuera
+    radio = 231;
+    glBegin(GL_POINTS);
+    glPointSize(5);
+    glColor3f(0, 153, 0);
+
+    for (float i = 6.92; i > 2.5; i -= 0.001) {
+        calx = radio * cos(i) + 350;
+        caly = radio * sin(i) + 319;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    //afuera borde
+    radio = 232;
+    glBegin(GL_POINTS);
+    glPointSize(5);
+    glColor3f(0, 0, 0);
 
     for (float i = 6.92; i > 2.5; i -= 0.001) {
         calx = radio * cos(i) + 350;
@@ -434,6 +483,40 @@ void dibujar() {
     glVertex2f(320, 90);
     glEnd();
 
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(267, 102);
+    glVertex2f(250, 95);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 250;
+        caly = radio * sin(i) + 95;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(267, 107);
+    glVertex2f(265, 120);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 265;
+        caly = radio * sin(i) + 120;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
 
     //-------------------------------------------------------------------------------------------------------------HOJAS 2
 
@@ -555,6 +638,40 @@ void dibujar() {
     glVertex2f(260, 108);
     glEnd();
 
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(205, 137);
+    glVertex2f(190, 135);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 190;
+        caly = radio * sin(i) + 135;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(205, 143);
+    glVertex2f(205, 160);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 205;
+        caly = radio * sin(i) + 160;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
     //-------------------------------------------------------------------------------------------------------------HOJAS 3
     //Hoja 3 izquierda
     //arriba
@@ -645,18 +762,54 @@ void dibujar() {
     glVertex2f(160, 145);
     glVertex2f(195, 147);
     glEnd(); //termina
-    
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(155, 192);
+    glVertex2f(140, 200);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 140;
+        caly = radio * sin(i) + 200;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(160, 192);
+    glVertex2f(162, 210);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 162;
+        caly = radio * sin(i) + 210;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina    
+
+
+
     //-------------------------------------------------------------------------------------------------------------HOJAS 4
     //Hoja 4 izquierda
     //arriba
-     glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(150, 205); //00
     glVertex2f(165, 240); //01 ancho arr
     glVertex2f(150, 280); //p alto
     glVertex2f(150, 250); //ancho ab
     glEnd();
-    
+
     glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
@@ -669,7 +822,7 @@ void dibujar() {
     glVertex2f(150, 250);
     glVertex2f(150, 205);
     glEnd(); //termina
-    
+
     //medio arriba
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
@@ -678,7 +831,7 @@ void dibujar() {
     glVertex2f(135, 270); //p alto
     glVertex2f(133, 243); //ancho ab
     glEnd();
-    
+
     glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
@@ -691,8 +844,8 @@ void dibujar() {
     glVertex2f(133, 243);
     glVertex2f(150, 205);
     glEnd(); //termina
-    
-     //medio abajo
+
+    //medio abajo
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(150, 205); //00
@@ -700,7 +853,7 @@ void dibujar() {
     glVertex2f(115, 260); //p alto
     glVertex2f(120, 232); //ancho ab
     glEnd();
-    
+
     glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
@@ -713,7 +866,7 @@ void dibujar() {
     glVertex2f(120, 232);
     glVertex2f(150, 205);
     glEnd(); //termina
-    
+
     //abajo
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
@@ -722,7 +875,7 @@ void dibujar() {
     glVertex2f(90, 260); //p alto
     glVertex2f(110, 220); //ancho ab
     glEnd();
-    
+
     glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
@@ -735,19 +888,56 @@ void dibujar() {
     glVertex2f(110, 220);
     glVertex2f(150, 205);
     glEnd(); //termina
-    
-     //-------------------------------------------------------------------------------------------------------------HOJAS 5
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(125, 265);
+    glVertex2f(110, 280);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 110;
+        caly = radio * sin(i) + 280;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(127, 270);
+    glVertex2f(140, 285);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 140;
+        caly = radio * sin(i) + 285;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 5
     //Hoja 5 izquierda
     //ab
-        glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(122, 285); //00
     glVertex2f(145, 305); //01 ancho arr
     glVertex2f(150, 350); //p alto
     glVertex2f(135, 310); //ancho ab
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(122, 285);
@@ -759,8 +949,8 @@ void dibujar() {
     glVertex2f(135, 310);
     glVertex2f(122, 285);
     glEnd(); //termina
-    
-      //arriba medio
+
+    //arriba medio
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(122, 285); //00
@@ -768,7 +958,7 @@ void dibujar() {
     glVertex2f(135, 355); //p alto
     glVertex2f(120, 320); //ancho ab
     glEnd();
-    
+
     glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
@@ -781,8 +971,8 @@ void dibujar() {
     glVertex2f(120, 320);
     glVertex2f(122, 285);
     glEnd(); //termina
-    
-      //abajo medio
+
+    //abajo medio
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(122, 285); //00
@@ -790,12 +980,12 @@ void dibujar() {
     glVertex2f(110, 355); //p alto
     glVertex2f(100, 315); //ancho ab
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(122, 285);
-    glVertex2f(120, 320); 
+    glVertex2f(120, 320);
     glVertex2f(120, 320);
     glVertex2f(110, 355);
     glVertex2f(110, 355);
@@ -803,21 +993,21 @@ void dibujar() {
     glVertex2f(100, 315);
     glVertex2f(122, 285);
     glEnd(); //termina
-    
+
     //arr
-        glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(122, 285); //00
     glVertex2f(105, 315); //01 ancho ab
     glVertex2f(90, 350); //p alto
     glVertex2f(100, 300); //ancho arr
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(122, 285);
-    glVertex2f(105, 315); 
+    glVertex2f(105, 315);
     glVertex2f(105, 315);
     glVertex2f(90, 350);
     glVertex2f(90, 350);
@@ -825,11 +1015,48 @@ void dibujar() {
     glVertex2f(100, 300);
     glVertex2f(122, 285);
     glEnd(); //termina
-    
-      //-------------------------------------------------------------------------------------------------------------HOJAS 6
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(120, 355);
+    glVertex2f(110, 365);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 110;
+        caly = radio * sin(i) + 365;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(125, 355);
+    glVertex2f(140, 360);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 140;
+        caly = radio * sin(i) + 360;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 6
     //Hoja 6 izquierda
     //arriba
-        glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(125, 365); //00
     glVertex2f(145, 380); //01 ancho ab
@@ -837,11 +1064,11 @@ void dibujar() {
     glVertex2f(120, 390); //ancho arr
     glEnd();\
 
-         glColor3f(0, 0, 0);
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(125, 365);
-    glVertex2f(145, 380); 
+    glVertex2f(145, 380);
     glVertex2f(145, 380);
     glVertex2f(143, 420);
     glVertex2f(143, 420);
@@ -849,22 +1076,22 @@ void dibujar() {
     glVertex2f(120, 390);
     glVertex2f(125, 365);
     glEnd(); //termina
-    
-   
-     //izquierda
-        glColor3f(0, 153, 0);
+
+
+    //izquierda
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(125, 365); //00
     glVertex2f(110, 385); //01 ancho ab
     glVertex2f(120, 425); //p alto
     glVertex2f(120, 390); //ancho arr
     glEnd();
-    
-           glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(125, 365);
-    glVertex2f(110, 385); 
+    glVertex2f(110, 385);
     glVertex2f(110, 385);
     glVertex2f(120, 425);
     glVertex2f(120, 425);
@@ -872,22 +1099,22 @@ void dibujar() {
     glVertex2f(120, 390);
     glVertex2f(125, 365);
     glEnd(); //termina
-    
-      //derecha
-    
-        glColor3f(0, 153, 0);
+
+    //derecha
+
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(125, 365); //00
     glVertex2f(140, 380); //01 ancho ab
     glVertex2f(160, 410); //p alto
     glVertex2f(150, 375); //ancho arr
     glEnd();
-    
-         glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(125, 365);
-    glVertex2f(140, 380); 
+    glVertex2f(140, 380);
     glVertex2f(140, 380);
     glVertex2f(160, 410);
     glVertex2f(160, 410);
@@ -895,13 +1122,135 @@ void dibujar() {
     glVertex2f(150, 375);
     glVertex2f(125, 365);
     glEnd(); //termina
-    
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(145, 420); //00
+    glVertex2f(165, 425);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 165;
+        caly = radio * sin(i) + 425;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(145, 425); //00
+    glVertex2f(135, 440);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 135;
+        caly = radio * sin(i) + 440;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 7
+    //Hoja 7 derecha
+    //medio
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(150, 430); //00
+    glVertex2f(170, 450); //01 ancho izquierda
+    glVertex2f(180, 485); //p alto
+    glVertex2f(150, 455); //derecha
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(150, 430);
+    glVertex2f(170, 450);
+    glVertex2f(170, 450);
+    glVertex2f(180, 485);
+    glVertex2f(180, 485);
+    glVertex2f(150, 455);
+    glVertex2f(150, 455);
+    glVertex2f(150, 430);
+    glEnd(); //termina
+
+
+    //izquierda
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(150, 430); //00
+    glVertex2f(170, 435); //01 ancho izquierda
+    glVertex2f(190, 470); //p alto
+    glVertex2f(165, 445); //ancho arr
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(150, 430);
+    glVertex2f(170, 435);
+    glVertex2f(170, 435);
+    glVertex2f(190, 470);
+    glVertex2f(190, 470);
+    glVertex2f(165, 445);
+    glVertex2f(165, 445);
+    glVertex2f(150, 430);
+    glEnd(); //termina
+
+
+    //derecha
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(150, 430); //00
+    glVertex2f(150, 455); //01 ancho izquierda
+    glVertex2f(150, 485); //p alto
+    glVertex2f(140, 450); //ancho arr
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(150, 430);
+    glVertex2f(150, 455);
+    glVertex2f(150, 455);
+    glVertex2f(150, 485);
+    glVertex2f(150, 485);
+    glVertex2f(140, 450);
+    glVertex2f(140, 450);
+    glVertex2f(150, 430);
+    glEnd(); //termina
+
+    //DECORACION
+    glBegin(GL_LINES);
+    glVertex2f(180, 485);
+    glVertex2f(185, 495);
+    glEnd();\
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 185;
+        caly = radio * sin(i) + 495;
+        glVertex2f(calx, caly);
+    }
+
+
+    glEnd();
 
 
     //-------------------------------------------------------------------------------------------------------------DERECHA
 
 
-
+    //-------------------------------------------------------------------------------------------------------------HOJAS 1
 
     //arriba derecha
     glColor3f(0, 153, 0);
@@ -1039,6 +1388,8 @@ void dibujar() {
 
 
 
+
+
     //-------------------------------------------------------------------------------------------------------------HOJAS 2
 
     //Hoja 2 derecha
@@ -1157,6 +1508,41 @@ void dibujar() {
     glVertex2f(440, 108);
     glEnd();
 
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(433, 102);
+    glVertex2f(450, 95);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 450;
+        caly = radio * sin(i) + 95;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(433, 107);
+    glVertex2f(435, 120);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 435;
+        caly = radio * sin(i) + 120;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+
     //-------------------------------------------------------------------------------------------------------------HOJAS 3
     //Hoja 3 derecha
     //arriba
@@ -1251,6 +1637,39 @@ void dibujar() {
     glVertex2f(505, 147);
     glEnd(); //termina
 
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(495, 137);
+    glVertex2f(510, 135);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 510;
+        caly = radio * sin(i) + 135;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(495, 143);
+    glVertex2f(495, 160);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 495;
+        caly = radio * sin(i) + 160;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
 
 
     //-------------------------------------------------------------------------------------------------------------HOJAS 4
@@ -1300,7 +1719,7 @@ void dibujar() {
     glVertex2f(550, 205);
     glEnd(); //termina
 
-     //medio abajo
+    //medio abajo
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(550, 205); //00
@@ -1308,8 +1727,8 @@ void dibujar() {
     glVertex2f(585, 260); //p alto
     glVertex2f(580, 232); //ancho ab
     glEnd();
-    
-        glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(550, 205);
@@ -1344,20 +1763,55 @@ void dibujar() {
     glVertex2f(590, 220);
     glVertex2f(550, 205);
     glEnd(); //termina
+    //termina
 
-    
-    //-------------------------------------------------------------------------------------------------------------HOJAS 6
-    //Hoja 6 derecha
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(545, 192);
+    glVertex2f(560, 200);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 560;
+        caly = radio * sin(i) + 200;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(540, 192);
+    glVertex2f(538, 210);
+    glEnd();
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 538;
+        caly = radio * sin(i) + 210;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 5
+    //Hoja 5 derecha
     //arriba
-        glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(578, 285); //00
     glVertex2f(555, 305); //01 ancho arr
     glVertex2f(550, 350); //p alto
     glVertex2f(565, 310); //ancho ab
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(578, 285);
@@ -1370,8 +1824,8 @@ void dibujar() {
     glVertex2f(578, 285);
     glEnd(); //termina
 
-    
-      //arriba medio
+
+    //arriba medio
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(578, 285); //00
@@ -1379,8 +1833,8 @@ void dibujar() {
     glVertex2f(565, 355); //p alto
     glVertex2f(580, 320); //ancho ab
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(578, 285);
@@ -1392,8 +1846,8 @@ void dibujar() {
     glVertex2f(580, 320);
     glVertex2f(578, 285);
     glEnd(); //termina
-    
-       //abajo medio
+
+    //abajo medio
     glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(578, 285); //00
@@ -1401,12 +1855,12 @@ void dibujar() {
     glVertex2f(590, 355); //p alto
     glVertex2f(600, 315); //ancho ab
     glEnd();
-    
-         glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(578, 285);
-    glVertex2f(580, 320); 
+    glVertex2f(580, 320);
     glVertex2f(580, 320);
     glVertex2f(590, 355);
     glVertex2f(590, 355);
@@ -1414,21 +1868,21 @@ void dibujar() {
     glVertex2f(600, 315);
     glVertex2f(578, 285);
     glEnd(); //termina
-    
-     //abajo
-        glColor3f(0, 153, 0);
+
+    //abajo
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(578, 285); //00
     glVertex2f(595, 315); //01 ancho arr
     glVertex2f(610, 350); //p alto
     glVertex2f(600, 300); //ancho ab
     glEnd();
-    
-     glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(578, 285);
-    glVertex2f(595, 315); 
+    glVertex2f(595, 315);
     glVertex2f(595, 315);
     glVertex2f(610, 350);
     glVertex2f(610, 350);
@@ -1436,11 +1890,48 @@ void dibujar() {
     glVertex2f(600, 300);
     glVertex2f(578, 285);
     glEnd(); //termina
-    
-       //-------------------------------------------------------------------------------------------------------------HOJAS 5
-    //Hoja 5 derecha
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(575, 265);
+    glVertex2f(590, 280);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 590;
+        caly = radio * sin(i) + 280;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(573, 270);
+    glVertex2f(560, 285);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 560;
+        caly = radio * sin(i) + 285;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina 
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 6
+    //Hoja 6 derecha
     //arriba
-        glColor3f(0, 153, 0);
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(575, 365); //00
     glVertex2f(555, 380); //01 ancho ab
@@ -1448,11 +1939,11 @@ void dibujar() {
     glVertex2f(580, 390); //ancho arr
     glEnd();\
 
-         glColor3f(0, 0, 0);
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(575, 365);
-    glVertex2f(555, 380); 
+    glVertex2f(555, 380);
     glVertex2f(555, 380);
     glVertex2f(557, 420);
     glVertex2f(557, 420);
@@ -1460,22 +1951,22 @@ void dibujar() {
     glVertex2f(580, 390);
     glVertex2f(575, 365);
     glEnd(); //termina
-    
-    
-     //derecha
-        glColor3f(0, 153, 0);
+
+
+    //derecha
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(575, 365); //00
     glVertex2f(590, 385); //01 ancho ab
     glVertex2f(580, 425); //p alto
     glVertex2f(580, 390); //ancho arr
     glEnd();
-    
-           glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(575, 365);
-    glVertex2f(590, 385); 
+    glVertex2f(590, 385);
     glVertex2f(590, 385);
     glVertex2f(580, 425);
     glVertex2f(580, 425);
@@ -1483,22 +1974,60 @@ void dibujar() {
     glVertex2f(580, 390);
     glVertex2f(575, 365);
     glEnd(); //termina
-    
-    
-      //azquierda
-        glColor3f(0, 153, 0);
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(580, 355);
+    glVertex2f(590, 365);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 590;
+        caly = radio * sin(i) + 365;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(575, 355);
+    glVertex2f(560, 360);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 560;
+        caly = radio * sin(i) + 360;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+
+    //azquierda
+    glColor3f(0, 153, 0);
     glBegin(GL_POLYGON);
     glVertex2f(575, 365); //00
     glVertex2f(560, 380); //01 ancho ab
     glVertex2f(540, 410); //p alto
     glVertex2f(550, 375); //ancho arr
     glEnd();
-    
-         glColor3f(0, 0, 0);
+
+    glColor3f(0, 0, 0);
     glLineWidth(1.5);
     glBegin(GL_LINES);
     glVertex2f(575, 365);
-    glVertex2f(560, 380); 
+    glVertex2f(560, 380);
     glVertex2f(560, 380);
     glVertex2f(540, 410);
     glVertex2f(540, 410);
@@ -1506,7 +2035,714 @@ void dibujar() {
     glVertex2f(550, 375);
     glVertex2f(575, 365);
     glEnd(); //termina
+
+
+    //-------------------------------------------------------------------------------------------------------------HOJAS 7
+    //Hoja 7 derecha
+    //medio
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(550, 430); //00
+    glVertex2f(530, 450); //01 ancho izquierda
+    glVertex2f(520, 485); //p alto
+    glVertex2f(550, 455); //derecha
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(550, 430);
+    glVertex2f(530, 450);
+    glVertex2f(530, 450);
+    glVertex2f(520, 485);
+    glVertex2f(520, 485);
+    glVertex2f(550, 455);
+    glVertex2f(550, 455);
+    glVertex2f(550, 430);
+    glEnd(); //termina
+
+
+    //izquierda
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(550, 430); //00
+    glVertex2f(530, 435); //01 ancho izquierda
+    glVertex2f(510, 470); //p alto
+    glVertex2f(535, 445); //ancho arr
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(550, 430);
+    glVertex2f(530, 435);
+    glVertex2f(530, 435);
+    glVertex2f(510, 470);
+    glVertex2f(510, 470);
+    glVertex2f(535, 445);
+    glVertex2f(535, 445);
+    glVertex2f(550, 430);
+    glEnd(); //termina
+
+
+    //derecha
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(550, 430); //00
+    glVertex2f(550, 455); //01 ancho izquierda
+    glVertex2f(550, 485); //p alto
+    glVertex2f(560, 450); //ancho arr
+    glEnd();\
+
+    //decoracion izquierda
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(555, 420); //00
+    glVertex2f(535, 425);
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 535;
+        caly = radio * sin(i) + 425;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //termina
+
+    //decoracion derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2f(555, 425); //00
+    glVertex2f(565, 440);
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 565;
+        caly = radio * sin(i) + 440;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(550, 430);
+    glVertex2f(550, 455);
+    glVertex2f(550, 455);
+    glVertex2f(550, 485);
+    glVertex2f(550, 485);
+    glVertex2f(560, 450);
+    glVertex2f(560, 450);
+    glVertex2f(550, 430);
+    glEnd(); //termina
+
+    //DECORACION
+    glBegin(GL_LINES);
+    glVertex2f(520, 485);
+    glVertex2f(515, 495);
+    glEnd();\
+
+    radio = 4;
+    glBegin(GL_POLYGON);
+    glColor3f(230, 0, 0);
+    for (float i = 0; i < 25; i += 1) {
+        calx = radio * cos(i) + 515;
+        caly = radio * sin(i) + 495;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+
+    //----------------------------------------------------------------------------------BANDERAS
+    //DERECHA
+    //banderas derecha
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(397, 406); //primero
+    glVertex2f(510, 520);
+    glVertex2i(397, 410);
+    glVertex2f(509, 523);
+    glVertex2f(509, 523);
+    glVertex2f(510, 520);
+    glEnd();\
     
+    glColor3f(252, 227, 0);
+    //PALO 
+    glBegin(GL_POLYGON);
+    glVertex2i(397, 406); //alto
+    glVertex2i(397, 410);
+    glVertex2i(509, 523); //ancho abajo
+    glVertex2i(510, 520);
+    glEnd();
+
+    //punta
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(495, 506);
+    glVertex2f(495, 518);
+    glVertex2f(495, 518);
+    glVertex2f(520, 530);
+    glVertex2f(520, 530);
+    glVertex2f(507, 507);
+    glVertex2f(507, 507);
+    glVertex2f(495, 506);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    // punta
+    glBegin(GL_POLYGON);
+    glVertex2i(495, 506); //junto al palo
+    glVertex2i(495, 518);
+    glVertex2i(520, 530); //ancho abajo
+    glVertex2i(507, 507);
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(497, 508);
+    glVertex2f(498, 515);
+    glVertex2f(498, 515);
+    glVertex2f(514, 524);
+    glVertex2f(514, 524);
+    glVertex2f(507, 511);
+    glVertex2f(507, 511);
+    glVertex2f(497, 508);
+    glEnd(); //termina
+
+
+    glColor3f(1, 1, 1);
+    //punta
+    glBegin(GL_POLYGON);
+    glVertex2i(497, 508); //alto
+    glVertex2i(498, 516);
+    glVertex2i(514, 524); //ancho abajo
+    glVertex2i(507, 511);
+    glEnd();
+
+
+
+    //----------------------------------------------------------------------------------BANDERAS
+    //IZQUIERDA
+    //banderas 
+    glColor3f(0, 0, 0);
+    glBegin(GL_LINES);
+    glVertex2i(303, 406); //primero
+    glVertex2i(303, 410);
+    glVertex2i(303, 410);
+    glVertex2f(191, 523);
+    glVertex2f(191, 523);
+    glVertex2f(190, 520);
+    glVertex2f(190, 520);
+    glVertex2i(303, 406);
+    glEnd();
+
+    glColor3f(252, 227, 0);
+    //PALO 
+    glBegin(GL_POLYGON);
+    glVertex2i(303, 406); //alto
+    glVertex2i(303, 410);
+    glVertex2i(191, 523); //ancho abajo
+    glVertex2i(190, 520);
+    glEnd();
+
+    //punta
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(205, 506);
+    glVertex2f(205, 518);
+    glVertex2f(205, 518);
+    glVertex2f(180, 530);
+    glVertex2f(180, 530);
+    glVertex2f(193, 507);
+    glVertex2f(193, 507);
+    glVertex2f(205, 506);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    // punta
+    glBegin(GL_POLYGON);
+    glVertex2i(205, 506); //junto al palo
+    glVertex2i(205, 518);
+    glVertex2i(180, 530); //ancho abajo
+    glVertex2i(193, 507);
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(203, 508);
+    glVertex2f(202, 515);
+    glVertex2f(202, 515);
+    glVertex2f(186, 524);
+    glVertex2f(186, 524);
+    glVertex2f(193, 511);
+    glVertex2f(193, 511);
+    glVertex2f(203, 508);
+    glEnd(); //termina
+
+
+    glColor3f(1, 1, 1);
+    //PALO 
+    glBegin(GL_POLYGON);
+    glVertex2i(203, 508); //alto
+    glVertex2i(202, 516);
+    glVertex2i(186, 524); //ancho abajo
+    glVertex2i(193, 511);
+    glEnd();
+
+
+
+    //---------------------------------------------------------------------------------------------
+    //palo abajo
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(435, 330); //alto
+    glVertex2f(575, 395);
+
+    glVertex2f(435, 334); //alto
+    glVertex2f(574, 398);
+    glEnd();
+
+    glColor3f(252, 227, 0);
+    //PALO 
+    glBegin(GL_POLYGON);
+    glVertex2i(435, 330); //
+    glVertex2i(435, 334); //
+    glVertex2i(575, 395); //ancho abajo 
+    glVertex2i(574, 398); //
+    glEnd();
+
+    //punta base
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(555, 386);
+    glVertex2f(560, 400);
+    glVertex2f(560, 400);
+    glVertex2f(588, 402);
+    glVertex2f(588, 402);
+    glVertex2f(568, 383);
+    glVertex2f(568, 383);
+    glVertex2f(555, 386);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    // punta
+    glBegin(GL_POLYGON);
+    glVertex2i(555, 386); //junto al palo
+    glVertex2i(560, 400); //arr
+    glVertex2i(588, 402); //ancho abajo
+    glVertex2i(568, 383);
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(557, 388);
+    glVertex2f(562, 397);
+    glVertex2f(562, 397);
+    glVertex2f(581, 399);
+    glVertex2f(581, 399);
+    glVertex2f(567, 387);
+    glVertex2f(567, 387);
+    glVertex2f(557, 388);
+    glEnd(); //termina
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(557, 388); //junto al palo
+    glVertex2i(562, 397); //arr
+    glVertex2i(582, 400); //ancho abajo
+    glVertex2i(567, 387);
+    glEnd();
+
+    //---------------------------------------------------------------------------IZQUIERDA
+    //palo abajo
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(265, 330); //alto
+    glVertex2f(125, 395);
+
+    glVertex2f(265, 334); //alto
+    glVertex2f(126, 398);
+    glEnd();
+
+    glColor3f(252, 227, 0);
+    //PALO 
+    glBegin(GL_POLYGON);
+    glVertex2i(265, 330); //
+    glVertex2i(265, 334); //
+    glVertex2i(125, 395); //ancho abajo 
+    glVertex2i(126, 398); //
+    glEnd();
+
+    //punta base
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(145, 386);
+    glVertex2f(140, 400);
+    glVertex2f(140, 400);
+    glVertex2f(112, 402);
+    glVertex2f(112, 402);
+    glVertex2f(132, 383);
+    glVertex2f(132, 383);
+    glVertex2f(145, 386);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    // punta
+    glBegin(GL_POLYGON);
+    glVertex2i(145, 386); //junto al palo
+    glVertex2i(140, 400); //arr
+    glVertex2i(112, 402); //ancho abajo
+    glVertex2i(132, 383);
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(143, 388);
+    glVertex2f(138, 397);
+    glVertex2f(138, 397);
+    glVertex2f(119, 399);
+    glVertex2f(119, 399);
+    glVertex2f(133, 387);
+    glVertex2f(133, 387);
+    glVertex2f(143, 388);
+    glEnd(); //termina
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(143, 388); //junto al palo
+    glVertex2i(138, 397); //arr
+    glVertex2i(119, 400); //ancho abajo
+    glVertex2i(133, 387);
+    glEnd();
+
+
+    //---------------------------------------------------------------------------------------------------------
+    //banderasss derecha
+
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(398, 406);
+    glVertex2i(493, 500);
+    glVertex2i(500, 400); //ancho abajo
+    glVertex2i(490, 360);
+    glEnd();
+    //color 2
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(435, 334);
+    glVertex2i(398, 406);
+    glVertex2i(500, 395); //ancho abajo
+    glVertex2i(490, 360);
+    glEnd();
+
+
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(415, 423);
+    glVertex2i(415, 400);
+    glVertex2i(450, 458); //ancho abajo
+    glVertex2i(410, 385);
+    glEnd();
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(450, 458);
+
+
+    glVertex2i(410, 385);
+    glVertex2i(430, 345);
+    glVertex2i(450, 395); //ancho abajo
+    glEnd();
+
+    //pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(398, 406);
+    glVertex2i(420, 428);
+
+    glVertex2i(420, 400); //ancho abajo
+    glVertex2i(410, 380);
+    glEnd();
+
+
+    //---------------------------------------------------------------------------------------------------------
+    //bandera izquierda
+
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(302, 406);
+    glVertex2i(207, 500);
+    glVertex2i(200, 400); //ancho abajo
+    glVertex2i(210, 360);
+    glEnd();
+    //color 2
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(265, 334);
+    glVertex2i(302, 406);
+    glVertex2i(200, 395); //ancho abajo
+    glVertex2i(210, 360);
+    glEnd();
+
+
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(285, 423);
+    glVertex2i(295, 400);
+    glVertex2i(250, 458); //ancho abajo
+    glVertex2i(290, 385);
+    glEnd();
+
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(250, 458);
+    glVertex2i(290, 385);
+    glVertex2i(270, 345);
+    glVertex2i(250, 395); //ancho abajo
+    glEnd();
+
+    //pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(302, 406);
+    glVertex2i(280, 428);
+
+    glVertex2i(280, 400); //ancho abajo
+    glVertex2i(290, 380);
+    glEnd();
+
+
+    //--------------------------------------------------------------------------BANDERAS BAJAS
+
+    //azulgrande
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(552, 385);
+    glVertex2i(435, 330);
+    glVertex2i(495, 210);
+    glVertex2i(530, 260); //ancho abajo
+    glEnd();
+
+
+
+    //pequenio blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(500, 360);
+    glVertex2i(460, 343);
+    glVertex2i(450, 300);
+    glVertex2i(475, 250); //ancho abajo
+    glVertex2i(495, 285); //ancho abajo
+
+    glEnd();
+
+    //azul pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(435, 330);
+    glVertex2i(460, 343); //arr
+    glVertex2i(457, 310); //aarriiba
+    glVertex2i(450, 300); //ancho abajo
+    glEnd();
+
+
+
+    //------------------------------------------------------------------------------IZQUIERDA 
+
+    //azulgrande
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(148, 385);
+    glVertex2i(265, 330);
+    glVertex2i(205, 210);
+    glVertex2i(170, 260); //ancho abajo
+    glEnd();
+
+
+
+    //pequenio blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(200, 360);
+    glVertex2i(240, 343);
+    glVertex2i(250, 300);
+    glVertex2i(225, 250); //ancho abajo
+    glVertex2i(205, 285); //ancho abajo
+
+    glEnd();
+
+    //azul pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(265, 330);
+    glVertex2i(240, 343); //arr
+    glVertex2i(243, 310); //aarriiba
+    glVertex2i(250, 300); //ancho abajo
+    glEnd();
+
+    //--------------------------------------------------------------------------banderas bajas
+    //izquierda
+    //azul pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(210, 200);
+    glVertex2i(350, 200); //derecho
+    glVertex2i(350, 180); //abajo derecho
+    glVertex2i(300, 165); //abajo izquierda
+    glVertex2i(250, 170); //abajo izquierda
+    glEnd();
+
+
+    //blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(260, 200);
+    glVertex2i(335, 200); //derecho
+    glVertex2i(325, 195); //abajo derecho
+    glVertex2i(300, 190); //abajo izquierda
+    glVertex2i(280, 190); //abajo izquierda
+    glEnd();
+
+
+    //medio bandera
+    //azull
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(345, 200); //00 izquiero
+    glVertex2i(355, 200); //00 derecho
+    glVertex2i(370, 160); //abajo derecha
+    glVertex2i(350, 145); //alto
+    glVertex2i(330, 160); //abajo izquierda    
+    glEnd();
+
+    //blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(348, 200); //00 izquiero
+    glVertex2i(352, 200); //00 derecho
+    glVertex2i(358, 151); //abajo derecha
+    glVertex2i(350, 145); //alto
+    glVertex2i(342, 151); //abajo izquierda    
+    glEnd();
+
+    //derecha----------------------------------------------------------------------
+    //izquierda
+    //azul pequenio
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(490, 200);
+    glVertex2i(350, 200); //derecho
+    glVertex2i(360, 178); //abajo derecho
+    glVertex2i(400, 165); //abajo izquierda
+    glVertex2i(450, 170); //abajo izquierda
+    glEnd();
+
+    //blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(440, 200);
+    glVertex2i(365, 200); //derecho
+    glVertex2i(375, 195); //abajo derecho
+    glVertex2i(400, 190); //abajo izquierda
+    glVertex2i(420, 190); //abajo izquierda
+    glEnd();
+
+
+
+    //---------------------------------------------------------------------------esbasta superior
+    //azul
+    glColor3f(0, 0, 255);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 500);
+    glVertex2i(358, 486); //derecha
+    glVertex2i(360, 500); //abajo derecho
+    glVertex2i(350, 550); //altoo
+    glVertex2i(333, 500);
+    glVertex2i(335, 470);
+    glEnd();
+
+    //blanco
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 500);
+    glVertex2i(352, 502); //derecha
+    glVertex2i(357, 515); //abajo derecho
+    glVertex2i(354, 535); //abajo izquierda
+    glVertex2i(340, 500); //abajo izquierda
+    glVertex2i(340, 480); //abajo abajo izquierda
+    glEnd();
+
+
+
+
+    //punta
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(350, 550);
+    glVertex2f(342, 560);
+    glVertex2f(342, 560);
+    glVertex2f(350, 590);
+    glVertex2f(350, 590);
+    glVertex2f(358, 560);
+    glVertex2f(358, 560);
+    glVertex2f(350, 550);
+    glEnd(); //termina
+
+    //punta
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 550);
+    glVertex2i(342, 560); //derecha
+    glVertex2i(350, 590); //alto
+    glVertex2i(358, 560); //abajo izquierda
+    glEnd();
+
+    //punta
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(350, 555);
+    glVertex2f(345, 560);
+    glVertex2f(345, 560);
+    glVertex2f(350, 580);
+    glVertex2f(350, 580);
+    glVertex2f(354, 560);
+    glVertex2f(354, 560);
+    glVertex2f(350, 555);
+    glEnd(); //termina
+
+    //punta adentro
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 555);
+    glVertex2i(345, 560); //izquierda
+    glVertex2i(350, 580); //alto
+    glVertex2i(354, 560); // derecha
+    glEnd();
+
+
+
+
 
     glFlush();
     glutSwapBuffers();
