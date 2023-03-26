@@ -28,9 +28,215 @@ void dibujar() {
     glVertex2f(700, 700); //p alto+40
     glVertex2f(700, 600); //ancho arriba  
     glEnd();
+    
+    //carnet //////M
+         glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(200, 620); //00
+    glVertex2f(210, 620); //01 ancho abajo
+    glVertex2f(210, 660); //p alto+40
+    glVertex2f(200, 660); //ancho arriba  
+    glEnd();
+    
+     //carnet 
+         glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(220, 660); //00
+    glVertex2f(230, 660); //01 ancho abajo
+    glVertex2f(230, 620); //p alto+40
+    glVertex2f(220, 620); //ancho arriba  
+    glEnd();
+    
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(200, 660); //00
+    glVertex2f(250, 660); //01 ancho abajo
+    glVertex2f(250, 650); //p alto+40
+    glVertex2f(200, 650); //ancho arriba  
+    glEnd();
+    
+             glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(240, 660); //00
+    glVertex2f(250, 660); //01 ancho abajo
+    glVertex2f(250, 620); //p alto+40
+    glVertex2f(240, 620); //ancho arriba  
+    glEnd();
+    
+    //MMMMMMMMMMM
+    
+     //carnet ppppp
+         glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(260, 620); //00
+    glVertex2f(270, 620); //01 ancho abajo
+    glVertex2f(270, 660); //p alto+40
+    glVertex2f(260, 660); //ancho arriba  
+    glEnd();
+    
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(260, 660); //00
+    glVertex2f(290, 660); //01 ancho abajo
+    glVertex2f(290, 650); //p alto+40
+    glVertex2f(260, 650); //ancho arriba  
+    glEnd();
+    
+        glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(280, 660); //00
+    glVertex2f(290, 660); //01 ancho abajo
+    glVertex2f(290, 635); //p alto+40
+    glVertex2f(280, 635); //ancho arriba  
+    glEnd();
+    
+        glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(260, 645); //00
+    glVertex2f(290, 645); //01 ancho abajo
+    glVertex2f(290, 635); //p alto+40
+    glVertex2f(260, 635); //ancho arriba  
+    glEnd();
+    //pppp
+    
+    /////11111
+        glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(300, 660); //00
+    glVertex2f(310, 660); //01 ancho abajo
+    glVertex2f(310, 620); //p alto+40
+    glVertex2f(300, 620); //ancho arriba  
+    glEnd();
+    
+    //9999
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(330 ,620); //00
+    glVertex2f(340, 620); //01 ancho abajo
+    glVertex2f(340, 660); //p alto+40
+    glVertex2f(330, 660); //ancho arriba  
+    glEnd();
 
     
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(320, 660); //00
+    glVertex2f(330, 660); //01 ancho abajo
+    glVertex2f(330, 650); //p alto+40
+    glVertex2f(320, 650); //ancho arriba  
+    glEnd();
+  
+        glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(315, 660); //00
+    glVertex2f(325, 660); //01 ancho abajo
+    glVertex2f(325, 635); //p alto+40
+    glVertex2f(315, 635); //ancho arriba  
+    glEnd();
+     
+        glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(315, 645); //00
+    glVertex2f(315, 635); //01 ancho abajo
+    glVertex2f(335, 635); //p alto+40
+    glVertex2f(335, 645); //ancho arriba  
+    glEnd();
+
+    /////0000000000
+     glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(350, 660); //00
+    glVertex2f(360, 660); //01 ancho abajo
+    glVertex2f(360, 620); //p alto+40
+    glVertex2f(350, 620); //ancho arriba  
+    glEnd();
     
+       glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(350, 660); //00
+    glVertex2f(370, 660); //01 ancho abajo
+    glVertex2f(370, 650); //p alto+40
+    glVertex2f(350, 650); //ancho arriba  
+    glEnd();
+    
+       glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(350, 620); //00
+    glVertex2f(380, 620); //01 ancho abajo
+    glVertex2f(380, 630); //p alto+40
+    glVertex2f(350, 630); //ancho arriba  
+    glEnd();
+        
+    
+       glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(370, 660); //00
+    glVertex2f(380, 660); //01 ancho abajo
+    glVertex2f(380, 620); //p alto+40
+    glVertex2f(370, 620); //ancho arriba  
+    glEnd();
+    /////0000
+    
+    //33333
+       glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(405, 660); //00
+    glVertex2f(415, 660); //01 ancho abajo
+    glVertex2f(415, 620); //p alto+40
+    glVertex2f(405, 620); //ancho arriba  
+    glEnd();
+    
+       glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(395, 660); //00
+    glVertex2f(415, 660); //01 ancho abajo
+    glVertex2f(415, 650); //p alto+40
+    glVertex2f(395, 650); //ancho arriba  
+    glEnd();
+    
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(400, 645); //00
+    glVertex2f(410, 645); //01 ancho abajo
+    glVertex2f(410, 635); //p alto+40
+    glVertex2f(400, 635); //ancho arriba  
+    glEnd();
+    
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(390, 630); //00
+    glVertex2f(410, 630); //01 ancho abajo
+    glVertex2f(410, 620); //p alto+40
+    glVertex2f(390, 620); //ancho arriba  
+    glEnd();
+
+    //444
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(450, 660); //00
+    glVertex2f(460, 660); //01 ancho abajo
+    glVertex2f(460, 620); //p alto+40
+    glVertex2f(450, 620); //ancho arriba  
+    glEnd();
+    
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(430, 660); //00
+    glVertex2f(440, 660); //01 ancho abajo
+    glVertex2f(440, 635); //p alto+40
+    glVertex2f(430, 635); //ancho arriba  
+    glEnd();
+    
+           glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(430, 645); //00
+    glVertex2f(460, 645); //01 ancho abajo
+    glVertex2f(460, 635); //p alto+40
+    glVertex2f(430, 635); //ancho arriba  
+    glEnd();
+    
+    
+    //------------------------------------------------------------------------------
     //triangulo del escudo
    
     glColor3f(252, 227, 0);
