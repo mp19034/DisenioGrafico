@@ -17,7 +17,7 @@ int main(int argc, char** argv) {
 
     glutInitWindowSize(700, 700);
 
-    glutCreateWindow("Hola mundo 2.0");
+    glutCreateWindow("REPUBLICA DE EL SALVADOR EN LA AMERICA CENTRAL");
 
     glClearColor(1, 1, 1, 1); //color al limpiar buffer
 

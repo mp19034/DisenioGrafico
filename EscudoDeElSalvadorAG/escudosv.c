@@ -10,11 +10,29 @@ float radio = 2, calx, caly;
 void dibujar() {
     glClear(GL_COLOR_BUFFER_BIT); //limpiamos con el nuevo color   
 
-    //glColor3f(0.211, 0.211, 0.211);\
+ 
 
+    //bandera
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 0); //00
+    glVertex2f(0, 55); //01 ancho abajo
+    glVertex2f(700, 55); //p alto+40
+    glVertex2f(700, 0); //ancho arriba  
+    glEnd();
+    
+     glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 600); //00
+    glVertex2f(0, 700); //01 ancho abajo
+    glVertex2f(700, 700); //p alto+40
+    glVertex2f(700, 600); //ancho arriba  
+    glEnd();
+
+    
+    
     //triangulo del escudo
-
-
+   
     glColor3f(252, 227, 0);
     glBegin(GL_TRIANGLES); //en el begin agregamos el modo en este caso agg un primitivo llamado GL_TRIANGLES
     glVertex2f(200, 200); //este lo ocupamos para mandar un vertice donde tomaremos un punto 
@@ -23,7 +41,7 @@ void dibujar() {
     //alto
     glVertex2f(350, 500);
     glEnd();
-
+    
     //blanco
     glColor3f(1, 1, 1);
     glBegin(GL_TRIANGLES); //en el begin agregamos el modo en este caso agg un primitivo llamado GL_TRIANGLES
@@ -33,6 +51,68 @@ void dibujar() {
     //alto
     glVertex2f(350, 490);
     glEnd();
+    
+    
+    //acoiris
+    
+    glColor3f(1, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(362, 464);
+    glVertex2f(350, 468);
+    glVertex2f(338, 464);
+    glVertex2f(333, 459);
+    glVertex2f(367, 459);
+    glEnd();
+    
+    
+    
+     glLineWidth(2);
+    glColor3f(1, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(365, 460);
+    glVertex2f(350, 464);
+    glVertex2f(335, 460);
+    glVertex2f(333, 455);
+    glVertex2f(367, 455);
+    glEnd();
+    
+     
+    glColor3f(1, 1, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(366, 456);
+    glVertex2f(350, 460);
+    glVertex2f(336, 456);
+    glVertex2f(331, 451);
+    glVertex2f(367, 451);
+    glEnd();
+    
+     glColor3f(0, 1, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(367, 452);
+    glVertex2f(350, 456);
+    glVertex2f(333, 452);
+    glVertex2f(328, 447);
+    glVertex2f(371, 447);
+    glEnd();
+    
+     glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(370, 448);
+    glVertex2f(350, 452);
+    glVertex2f(332, 448);
+    glVertex2f(325, 443);
+    glVertex2f(373, 443);
+    glEnd();
+    
+     glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(367, 444);
+    glVertex2f(350, 448);
+    glVertex2f(328, 442);
+    glVertex2f(322, 439);
+    glVertex2f(370, 439);
+    glEnd();
+    
 
 
     //mar
@@ -50,6 +130,22 @@ void dibujar() {
 
     glEnd();
     glFlush();
+    
+       glLineWidth(0.5);
+      glColor3f(1, 1, 1);
+    glBegin(GL_LINES);
+    glVertex2f(235, 215);
+    glVertex2f(460, 215);
+    glColor3f(0, 0, 0);
+    glVertex2f(245, 225);
+    glVertex2f(450, 225);
+     glColor3f(1, 1, 1);
+    glVertex2f(255, 235);
+    glVertex2f(440, 235);
+     glColor3f(1, 1, 1);
+    glVertex2f(275, 245);
+    glVertex2f(420, 245);
+    glEnd();
     //-------------------------------------------------------------------------------------------------------------
 
     //montanias 1
@@ -197,11 +293,19 @@ void dibujar() {
     glColor3f(252, 227, 0);
     //PALO 
     glBegin(GL_POLYGON);
-
     glVertex2i(348, 380); //alto
     glVertex2i(352, 380);
     glVertex2i(352, 321); //ancho abajo
     glVertex2i(348, 317);
+    glEnd();
+    
+    glColor3f(0.902, 0, 0);
+    glBegin(GL_TRIANGLES); 
+    glVertex2f(346, 375); 
+    //base
+    glVertex2f(354, 375);
+    //alto
+    glVertex2f(350, 385);
     glEnd();
 
     glBegin(GL_POINTS);
@@ -1273,9 +1377,7 @@ void dibujar() {
     glVertex2f(390, 120);
     glVertex2f(380, 90);
 
-    glVertex2f(350, 350);
-    glVertex2f(350, 0);
-    glEnd();
+    
 
 
     //litle arr
@@ -2228,6 +2330,112 @@ void dibujar() {
     glVertex2i(507, 511);
     glEnd();
 
+    //adornos
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(497, 504);
+    glVertex2f(493, 510);
+    glVertex2f(493, 510);
+    glVertex2f(489, 507);
+    glVertex2f(489, 507);
+    glVertex2f(493, 500);
+    glVertex2f(497, 500);
+    glVertex2f(497, 504);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(497, 504);
+    glVertex2i(493, 510); //derecha
+    glVertex2i(489, 507); //alto
+    glVertex2i(493, 500); //abajo izquierda
+    glEnd();
+
+    //colgante
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(493, 500);
+    glVertex2f(493, 483);
+    glVertex2f(493, 483);
+    glVertex2f(500, 481);
+    glVertex2f(500, 481);
+    glVertex2f(503, 488);
+    glVertex2f(503, 488);
+    glVertex2f(493, 500);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(493, 500);
+    glVertex2i(493, 483); //derecha
+    glVertex2i(500, 481); //alto
+    glVertex2i(503, 488);
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 486;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 486;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 486;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    // abajo
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 500;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 500;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 500;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+
+
 
 
     //----------------------------------------------------------------------------------BANDERAS
@@ -2299,6 +2507,110 @@ void dibujar() {
     glVertex2i(186, 524); //ancho abajo
     glVertex2i(193, 511);
     glEnd();
+    //adornos
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(203, 504);
+    glVertex2f(207, 510);
+    glVertex2f(207, 510);
+    glVertex2f(211, 507);
+    glVertex2f(211, 507);
+    glVertex2f(207, 500);
+    glVertex2f(207, 500);
+    glVertex2f(203, 504);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(203, 504);
+    glVertex2i(207, 510); //derecha
+    glVertex2i(211, 507); //alto
+    glVertex2i(207, 500); //abajo izquierda
+    glEnd();
+
+    //colgante
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(207, 500);
+    glVertex2f(207, 483);
+    glVertex2f(207, 483);
+    glVertex2f(200, 481);
+    glVertex2f(200, 481);
+    glVertex2f(197, 488);
+    glVertex2f(197, 488);
+    glVertex2f(203, 500);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(207, 500);
+    glVertex2i(207, 483); //derecha
+    glVertex2i(200, 481); //alto
+    glVertex2i(197, 488);
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 214;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 214;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 214;
+        caly = radio * sin(i) + 513;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    // abajo
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 200;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 200;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 200;
+        caly = radio * sin(i) + 498;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
 
 
 
@@ -2367,6 +2679,112 @@ void dibujar() {
     glVertex2i(567, 387);
     glEnd();
 
+    //pomo
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(550, 390);
+    glVertex2f(553, 382);
+    glVertex2f(553, 382);
+    glVertex2f(557, 383);
+    glVertex2f(577, 383);
+    glVertex2f(554, 390);
+    glVertex2f(554, 390);
+    glVertex2f(550, 390);
+    glEnd(); //termina
+
+    //punta
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(550, 390);
+    glVertex2i(553, 382); //derecha
+    glVertex2i(557, 383); //alto
+    glVertex2i(554, 390); //abajo izquierda
+    glEnd();
+
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(553, 383);
+    glVertex2f(549, 360);
+    glVertex2f(549, 360);
+    glVertex2f(555, 357);
+    glVertex2f(555, 357);
+    glVertex2f(560, 363);
+    glVertex2f(560, 363);
+    glVertex2f(553, 383);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(553, 383);
+    glVertex2i(549, 360); //derecha
+    glVertex2i(555, 357); //alto
+    glVertex2i(560, 363);
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 551;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 551;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 551;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    // abajo
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 557;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 557;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 557;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
     //---------------------------------------------------------------------------IZQUIERDA
     //palo abajo
     glColor3f(0, 0, 0);
@@ -2431,6 +2849,114 @@ void dibujar() {
     glVertex2i(119, 400); //ancho abajo
     glVertex2i(133, 387);
     glEnd();
+
+    //pomo
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(150, 390);
+    glVertex2f(147, 382);
+    glVertex2f(147, 382);
+    glVertex2f(143, 383);
+    glVertex2f(143, 383);
+    glVertex2f(146, 390);
+    glVertex2f(146, 390);
+    glVertex2f(150, 390);
+    glEnd(); //termina
+
+    //punta
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(150, 390);
+    glVertex2i(147, 382); //derecha
+    glVertex2i(143, 383); //alto
+    glVertex2i(146, 390); //abajo izquierda
+    glEnd();
+
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(147, 383);
+    glVertex2f(151, 360);
+    glVertex2f(151, 360);
+    glVertex2f(145, 357);
+    glVertex2f(145, 357);
+    glVertex2f(140, 363);
+    glVertex2f(140, 363);
+    glVertex2f(147, 383);
+    glEnd(); //termina
+
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(147, 383);
+    glVertex2i(151, 360); //derecha
+    glVertex2i(145, 357); //alto
+    glVertex2i(140, 363);
+
+    glEnd();
+
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 149;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 149;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 149;
+        caly = radio * sin(i) + 395;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    // abajo
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 143;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 143;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 143;
+        caly = radio * sin(i) + 378;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
 
 
     //---------------------------------------------------------------------------------------------------------
@@ -2740,9 +3266,344 @@ void dibujar() {
     glVertex2i(354, 560); // derecha
     glEnd();
 
+    //decoracion----------------------------------------------------------------
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(348, 550);
+    glVertex2f(352, 550);
+    glVertex2f(352, 550);
+    glVertex2f(352, 545);
+    glVertex2f(352, 545);
+    glVertex2f(348, 545);
+    glVertex2f(348, 545);
+    glVertex2f(348, 550);
+    glEnd(); //termina
+
+
+    //pomo
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(348, 550);
+    glVertex2i(352, 550); //derecha
+    glVertex2i(352, 545); //alto
+    glVertex2i(348, 545); //abajo izquierda
+    glEnd();
+
+    //adorno
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(350, 545);
+    glVertex2f(360, 535);
+    glVertex2f(360, 535);
+    glVertex2f(358, 530);
+    glVertex2f(358, 530);
+    glVertex2f(353, 530);
+    glVertex2f(353, 530);
+    glVertex2f(350, 545);
+    glEnd(); //termina
+
+    //punta
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 545);
+    glVertex2i(360, 535); //derecha
+    glVertex2i(358, 530); //alto
+    glVertex2i(353, 530); //abajo izquierda
+    glEnd();
+
+
+    //adorno
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(350, 545);
+    glVertex2f(337, 537);
+    glVertex2f(337, 537);
+    glVertex2f(338, 530);
+    glVertex2f(338, 530);
+    glVertex2f(343, 530);
+    glVertex2f(343, 530);
+    glVertex2f(350, 545);
+    glEnd(); //termina
+
+    //punta
+    glColor3f(252, 227, 0);
+    glBegin(GL_POLYGON);
+    glVertex2i(350, 545);
+    glVertex2i(337, 537); //derecha
+    glVertex2i(338, 530); //alto
+    glVertex2i(343, 530); //abajo izquierda
+    glEnd();
+
+    //rueditas de esbastas
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 343;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+    //rueditas de esbastas
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 343;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    //rueditas de esbastas
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 10; i += 0.01) {
+        calx = radio * cos(i) + 343;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    // derecha
+
+    //rueditas de esbastas
+    radio = 4;
+    glBegin(GL_POINTS);
+    glColor3f(252, 227, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 358;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 5;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 358;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
+
+    radio = 3;
+    glBegin(GL_POINTS);
+    glColor3f(0, 0, 0);
+    for (float i = 0; i < 25; i += 0.01) {
+        calx = radio * cos(i) + 358;
+        caly = radio * sin(i) + 548;
+        glVertex2f(calx, caly);
+    }
+    glEnd();
 
 
 
+    //CHONGA
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(350, 86);
+    glVertex2i(368, 86);
+    glVertex2i(380, 97); //derecha
+
+    glVertex2i(382, 113); //alto
+    glVertex2i(365, 122); //abajo izquierda
+    glVertex2i(354, 111); //abajo izquierda
+    glEnd();
+
+    //BLANCO CENTRO
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(356, 92);
+    glVertex2i(368, 92);
+    glVertex2i(373, 97); //derecha
+
+    glVertex2i(375, 108); //alto
+    glVertex2i(365, 113); //abajo izquierda
+    glVertex2i(360, 108); //abajo izquierda
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(356, 92);
+    glVertex2f(368, 92);
+    glVertex2f(368, 92);
+    glVertex2f(373, 97);
+    glVertex2f(373, 97);
+    glVertex2f(375, 108);
+    glVertex2f(375, 108);
+    glVertex2f(365, 113);
+    glVertex2f(365, 113);
+    glVertex2f(360, 108);
+    glVertex2f(360, 108);
+    glVertex2f(355, 92);
+    glEnd(); //termina
+
+    //BOTON CENTRO
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(345, 95);
+    glVertex2i(355, 95);
+    glVertex2i(355, 83); //derecha
+    glVertex2i(345, 83); //alto
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(345, 95);
+    glVertex2f(355, 95);
+    glVertex2f(355, 83);
+    glVertex2f(345, 83);
+    glEnd();
+
+    //IZQUIERDA
+    //CHONGA
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(350, 86);
+    glVertex2i(332, 86);
+    glVertex2i(320, 97); //derecha
+
+    glVertex2i(318, 113); //alto
+    glVertex2i(335, 122); //abajo izquierda
+    glVertex2i(346, 111); //abajo izquierda
+    glEnd();
+
+    //BLANCO CENTRO
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(344, 92);
+    glVertex2i(332, 92);
+    glVertex2i(327, 97); //derecha
+
+    glVertex2i(325, 108); //alto
+    glVertex2i(335, 113); //abajo izquierda
+    glVertex2i(340, 108); //abajo izquierda
+    glEnd();
+
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(344, 92);
+    glVertex2f(332, 92);
+    glVertex2f(332, 92);
+    glVertex2f(327, 97);
+    glVertex2f(327, 97);
+    glVertex2f(325, 108);
+    glVertex2f(325, 108);
+    glVertex2f(335, 113);
+    glVertex2f(335, 113);
+    glVertex2f(340, 108);
+    glVertex2f(340, 108);
+    glVertex2f(344, 92);
+    glEnd(); //termina
+
+
+
+    //PATAS DE LAURELES
+
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(345, 90);
+    glVertex2i(345, 83);
+    glVertex2i(320, 80); //derecha
+
+    glVertex2i(290, 60); //alto
+    glVertex2i(300, 60); //abajo izquierda
+    glVertex2i(302, 58); //abajo izquierda
+    glEnd();
+    
+      glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(345, 90);
+    glVertex2f(345, 83);
+    glVertex2f(345, 83);
+    glVertex2f(320, 80);
+    glVertex2f(320, 80);
+    glVertex2f(290, 60);
+    glVertex2f(290, 60);
+    glVertex2f(300, 60);
+    glVertex2f(300, 60);
+    glVertex2f(302, 58);
+    glVertex2f(302, 58);
+    glVertex2f(345, 90);
+    glEnd(); //termina
+    
+    //DERECHA
+    glColor3f(0, 153, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(355, 90);
+    glVertex2i(355, 83);
+    glVertex2i(380, 80); //derecha
+
+    glVertex2i(415, 60); //alto
+    glVertex2i(400, 60); //abajo izquierda
+    glVertex2i(398, 58); //abajo izquierda
+    glEnd();
+    
+        glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(355, 90);
+    glVertex2f(355, 83);
+    glVertex2f(355, 83);
+    glVertex2f(380, 80);
+    glVertex2f(380, 80);
+    glVertex2f(415, 60);
+    glVertex2f(415, 60);
+    glVertex2f(400, 60);
+    glVertex2f(400, 60);
+    glVertex2f(398, 58);
+    glVertex2f(398, 58);
+    glVertex2f(355, 90);
+    glEnd(); //termina
+
+    //PATAS DE CHONGA
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(345, 95);
+    glVertex2i(345, 83);
+    glVertex2i(324, 80); //derecha
+
+    glVertex2i(314, 60); //alto
+    glVertex2i(324, 67); //abajo izquierda
+    glVertex2i(326, 58); //abajo izquierda
+    glEnd();
+
+
+    //RERECHA
+    glColor3f(0, 0, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(355, 95);
+    glVertex2i(355, 83);
+    glVertex2i(375, 80); //derecha
+
+    glVertex2i(384, 60); //alto
+    glVertex2i(376, 67); //abajo izquierda
+    glVertex2i(374, 58); //abajo izquierda
+    glEnd();
+
+    //borde btn
+    glColor3f(0, 0, 0);
+    glLineWidth(1.5);
+    glBegin(GL_LINES);
+    glVertex2f(345, 95);
+    glVertex2f(355, 95);
+    glVertex2f(355, 95);
+    glVertex2f(355, 83);
+    glVertex2f(355, 83);
+    glVertex2f(345, 83);
+    glVertex2f(345, 83);
+    glVertex2f(345, 95);
+    glEnd();
 
     glFlush();
     glutSwapBuffers();
